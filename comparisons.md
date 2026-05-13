@@ -1,99 +1,102 @@
-# ClawCode vs Other Tools
+# Aiola vs Other Tools
 
-How ClawCode compares to other tools in the AI coding space.
+How Aiola — the local agentic desktop app for Claude Code and Codex — compares to the tools people often use alongside or instead of it.
 
----
-
-## ClawCode vs OpenClaw
-
-| | ClawCode | OpenClaw |
-|---|---|---|
-| Type | Desktop workspace | CLI agent runtime |
-| Cost | Pro subscription | Free, open source |
-| Multi-project | Yes — sidebar with isolation | No — one project per session |
-| Planning tools | Plan mode, Workflow, Tasks | None |
-| Agent types | Planner, Coder, UI, Bug Fixer | Single agent |
-| Git actions | One-click in dashboard | Manual terminal |
-| Agent loops | Yes | No |
-| Dashboard | Yes — logs, changes, running agents | No |
-
-**Summary:** OpenClaw is the engine. ClawCode is the vehicle. You need OpenClaw to use ClawCode. ClawCode makes OpenClaw usable at scale across many projects.
+> Aiola requires the **Claude Code SDK** and/or the **Codex SDK** to be installed locally. It does not bundle an LLM. The model picker hides providers that aren't installed.
 
 ---
 
-## ClawCode vs Cursor
+## Aiola vs Claude Code (CLI)
 
-| | ClawCode | Cursor |
+| | Aiola | Claude Code CLI |
 |---|---|---|
-| Type | Multi-project desktop workspace | AI-native code editor (VS Code fork) |
-| Multi-project | Yes | No — one project per window |
-| Built on OpenClaw | Yes | No |
-| Planning tools | Yes | No |
-| Agent orchestration | Yes | Limited (Composer) |
-| Git actions | Built-in dashboard | Via editor UI |
+| Type | Local agentic desktop app | CLI-first agentic coding tool |
+| Provider stack | Claude Code SDK + Codex SDK side-by-side | Claude Code SDK only |
+| Project model | Workspaces + central cross-workspace command center | Single working directory per session |
+| Task system | Board with state machine and auto-PR pipeline | None |
+| GitHub PR review | Built-in AI review and AI fix flows | Manual via prompts |
+| App-log triage | Live grouping with AI analyze and AI fix | None |
+| Feedback triage | Capture + customizable fields | None |
+| Automations | Scheduled agentic jobs across workspaces | None |
+| MCP server manager | Yes — per workspace | Per-config-file |
+| Knowledge base | `/info` profile + `brief.md` + `rules.md` per workspace | `CLAUDE.md` per repo |
+| Analytics | Per-project + portfolio-level | None |
+| Calendar | Scheduled tasks and automations | None |
+| Runs locally | Yes (Electron) | Yes (CLI) |
 
-**Summary:** Cursor is an excellent editor for single-project coding. ClawCode is not an editor — it is a multi-project operations layer. Many users use both together.
+**Summary:** Claude Code is the agentic coding runtime. Aiola is the agentic desktop app that wraps the Claude Code SDK (and Codex SDK), turns its output into tracked tasks and pushed PRs, and surfaces every signal — errors, feedback, PRs, analytics — in one command center.
 
 ---
 
-## ClawCode vs Windsurf
+## Aiola vs Codex (CLI)
 
-| | ClawCode | Windsurf |
+| | Aiola | Codex CLI |
 |---|---|---|
-| Type | Multi-project desktop workspace | Agentic IDE |
-| Multi-project | Yes | No |
-| Built on OpenClaw | Yes | No |
-| Central orchestration | Yes | No |
-| Planning tools | Yes | No |
-| Platform | macOS, Windows | macOS, Windows, Linux |
+| Type | Local agentic desktop app | CLI-first agentic coding tool |
+| Provider stack | Codex SDK + Claude Code SDK side-by-side | Codex SDK only |
+| Multi-project | Workspaces + central views | Single working directory per session |
+| Auto-PR pipeline | Yes — worktree commit, push, `gh pr create`, recovery sweep | None |
+| AI PR review and fix flows | Yes | None |
+| MCP server management | Per workspace | Per-config-file |
+| Knowledge base per project | Yes | Limited |
 
-**Summary:** Windsurf is an agentic IDE for single-project work with Cascade. ClawCode manages many projects simultaneously with isolated agents and a central dashboard.
+**Summary:** Codex is one provider. Aiola runs the Codex SDK and Claude Code SDK side-by-side in a local agentic desktop app, and adds the task system, PR pipeline, log/feedback triage, automations, and analytics on top.
 
 ---
 
-## ClawCode vs VSCode
+## Aiola vs Cursor
 
-| | ClawCode | VSCode |
+| | Aiola | Cursor |
 |---|---|---|
-| Type | Multi-project AI workspace | General-purpose editor |
-| AI agents | Built-in via OpenClaw | Via Copilot extension |
-| Multi-project dashboard | Yes | No |
-| Planning tools | Yes | No |
-| Cost | Pro subscription | Free |
+| Type | Agentic desktop app | AI-native code editor (VS Code fork) |
+| Multi-project | Workspaces + central views | One project per window |
+| Task system | Yes | No |
+| Auto-PR pipeline | Yes | No |
+| AI PR review on incoming PRs | Yes | No |
+| App-log triage | Yes | No |
+| Feedback / Analytics / Automations | Yes | No |
+| MCP server manager | Yes | No |
 
-**Summary:** VSCode is a free extensible editor. ClawCode is a dedicated AI workspace. They serve different purposes and can be used together.
+**Summary:** Cursor is an excellent agentic editor for inline coding. Aiola is not an editor — it is the agentic operations layer for everything that happens *around* the code: tasks, PRs, errors, feedback, automations, analytics. They work well together.
 
 ---
 
-## ClawCode vs Codex (OpenAI)
+## Aiola vs VSCode
 
-| | ClawCode | Codex |
+| | Aiola | VSCode |
 |---|---|---|
-| Type | Local desktop workspace | Cloud-based coding agent |
-| Runs locally | Yes | No — cloud only |
-| Multi-project | Yes | No |
-| Model provider | Your own via OpenClaw | OpenAI only |
-| Planning tools | Yes | No |
+| Type | Agentic desktop app | General-purpose editor |
+| Built-in agentic stack | Yes — Claude Code SDK + Codex SDK | Via extensions only |
+| Multi-project command center | Yes | No |
+| Task system + auto-PR pipeline | Yes | No |
+| App-log / feedback / analytics triage | Yes | No |
+| MCP server manager | Yes | No |
 
-**Summary:** Codex is a cloud agent tied to OpenAI. ClawCode runs locally with your own model keys, supports multiple projects, and adds planning and orchestration.
+**Summary:** VSCode is a free extensible editor. Aiola is a dedicated local agentic workspace. They serve different purposes and pair well.
 
 ---
 
-## ClawCode vs Antigravity (Google)
+## Aiola vs Linear / Jira (project trackers)
 
-| | ClawCode | Antigravity |
+| | Aiola | Linear / Jira |
 |---|---|---|
-| Type | Multi-project desktop workspace | Agentic IDE |
-| Made by | Independent | Google |
-| Multi-project | Yes | No |
-| Built on OpenClaw | Yes | No |
-| Planning tools | Yes | No |
-| Cost | Pro subscription | Free preview |
+| Agentic execution | Yes — tasks run via Claude Code SDK or Codex SDK | No — tracker only |
+| Auto-PR creation from tasks | Yes | No |
+| AI PR review | Yes | No |
+| App-log triage | Yes | No |
+| Feedback triage | Yes | No |
+| Cross-workspace command center | Yes | Yes (cross-team) |
 
-**Summary:** Antigravity is Google's agentic IDE for single-project work. ClawCode is a multi-project workspace with central orchestration built on OpenClaw.
+**Summary:** Linear and Jira track work; Aiola also *executes* work. A task in Aiola can move from todo to a pushed PR by an agent without leaving the app.
+
+---
+
+## Pricing note
+
+Aiola is priced by analytics event volume — 100k / 500k / 1M / 5M events on Pro Monthly ($24, $49, $89, $249) and Pro Yearly (10× monthly, 2 months free). 7-day free trial on the 100k tier. Teams plan coming soon. There is no free plan. See [aiola.app/pricing](https://aiola.app/pricing).
 
 ---
 
 ## Links
-- Website: [clawcode.app](https://clawcode.app)
-- Full comparison pages: [clawcode.app/comparisons](https://clawcode.app/comparisons/openclaw)
+- Website: [aiola.app](https://aiola.app)
+- Full comparison page: [Aiola vs Claude Code](https://aiola.app/comparisons/claude)

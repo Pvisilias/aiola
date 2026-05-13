@@ -1,74 +1,125 @@
-# ClawCode Use Cases
+# Aiola Use Cases
 
-Real-world ways people use ClawCode — the desktop workspace for OpenClaw.
+Real-world ways people use Aiola — the local agentic desktop app for Claude Code and Codex.
 
----
-
-## Running multiple apps at once
-
-You have 3 active apps — a SaaS, a client project, and a side project. Without ClawCode, each one is a separate terminal session and you're constantly losing context.
-
-With ClawCode: all three projects are in the sidebar. Each has its own isolated OpenClaw agent setup. Switch between them instantly. Queue work on all three in parallel. Monitor everything from the dashboard.
+> Aiola requires the **Claude Code SDK** and/or **Codex SDK** to be installed locally. It does not bundle an LLM.
 
 ---
 
-## Using OpenClaw without the CLI friction
+## Running agentic workflows across many repos
 
-OpenClaw is powerful but it's a CLI runtime. For every task you need to open a terminal, navigate to the right folder, run the right command, and watch output scroll by.
+You have eight projects — a SaaS, two client apps, three side projects, and two abandoned-but-still-shipping experiments. The Claude Code or Codex CLIs need a separate session per repo, and you constantly lose context.
 
-With ClawCode: no terminal needed for most operations. Connect your project folder once. ClawCode generates the agent configs, gives you a task list, and lets you run agents from a clean desktop UI. Terminal is still available when you need it.
-
----
-
-## Planning and coding in the same place
-
-You plan work in Notion or Linear, then copy-paste tasks into your terminal to feed agents. Every round-trip wastes time and breaks focus.
-
-With ClawCode: write your plan in Plan mode, break it into tasks, assign to an agent, and run — all without leaving the app. Agents can also generate plans and tasks for you.
+With Aiola: every repo is a workspace in one local agentic desktop app. The `/central/home` command center aggregates today's tasks, recent app-log spikes, incoming feedback, open PRs, and scheduled automations across every workspace. Pick a global default model, override per thread when a project needs different capability.
 
 ---
 
-## Parallel agent execution
+## Auto-PR pipeline from a task
 
-You want to run the Coder agent on Project A while the Bug Fixer works on Project B. In a plain terminal setup, this means multiple windows and manual coordination.
+You finish steering an agent through a feature task. Now you have to commit, push, open a PR, and write a description.
 
-With ClawCode: queue work on both projects, let agent loops run, and watch the running agents view update as work completes. One dashboard for all of it.
-
----
-
-## Shipping without a git client
-
-After agent changes, you need to review diffs, stage files, write a commit, and push. Normally that's a separate git GUI or more terminal commands.
-
-With ClawCode: the recent changes view shows what changed per project. Stage, commit, and push with one click. No context switch required.
+With Aiola: move the task to `create_pr`. The auto-PR pipeline checks out the task branch in a worktree, commits any dirty changes, merges subtask branches if present, pushes the branch, and runs `gh pr create`. If a step fails too many times the task lands in `human_review` with a `pr-failed` label and the recovery sweep retries it later. Crashes and transient git failures don't permanently wedge the task.
 
 ---
 
-## Repeatable workflows
+## Agentic PR review on incoming pull requests
 
-You deploy to staging the same way every time — run tests, build, commit, push, notify. Setting this up manually every time is slow and error-prone.
+A teammate or contractor opens a PR. Reviewing it manually means pulling the branch, running it, reading the diff, and writing thoughtful comments.
 
-With ClawCode: build a workflow once, save it, run it whenever needed. Predefined automations handle the repetitive parts.
-
----
-
-## Managing client projects separately
-
-You're an agency or freelancer with multiple client codebases. Mixing up context — or having agents touch the wrong project — is a real risk.
-
-With ClawCode: every project is fully isolated. Agents from Project A cannot access or affect Project B. Each client gets their own agent setup, task list, and git controls.
+With Aiola: open the PR in `/github` or `/central/github`. Trigger an AI review with the PR's files and history, or a fix flow that creates a worktree-backed thread on the PR branch using the same provider/model as the rest of the workspace. Optionally auto-comment a concise summary back on the PR. Duplicate detection can auto-close PRs that retread closed ones.
 
 ---
 
-## Central visibility for operators
+## Live app-log triage instead of inbox-zeroing Sentry
 
-You need to know what's running, what changed, and what's pending — across all projects — at a glance.
+Errors stream in across multiple products. Manually grouping them, deciding which are urgent, and routing fixes is a full-time chore.
 
-With ClawCode: the central dashboard shows running agents, recent changes, logs, and cross-project git activity. One screen replaces five tabs.
+With Aiola: `/app-logs` and `/central/app-logs` group errors live, with stats, filters, and detail panels. From a log group you can run AI analyze (root cause) or AI fix (which opens a thread on the relevant code). Realtime updates keep the queue current without refresh.
+
+---
+
+## Closing the user-feedback loop
+
+Feedback piles up in spreadsheets, Discord, and email and turns into a graveyard.
+
+With Aiola: `/feedback` captures bugs and feature requests with customizable issue and feature field definitions. From a feedback item you can open a coding thread that references the feedback. The central `/central/feedback` view rolls everything up across workspaces while keeping each project's field config separate.
+
+---
+
+## Scheduled agentic automations across the portfolio
+
+You have repetitive agentic chores — daily error digest, weekly PR cleanup, monthly analytics summary.
+
+With Aiola: `/automations` builds recurring jobs. Scope to one workspace or all of them. Mention files, agents, tasks, logs, feedback, workspaces, GitHub issues, and PRs in the prompt. Live updates while running. The calendar shows every scheduled run alongside scheduled tasks.
+
+---
+
+## Per-project knowledge base for agents
+
+Agents do better with context. Repeating that context every conversation is friction.
+
+With Aiola: every workspace has `/info` — an editable project profile (app name, email, URL, goal, audience, brand voice, values, GTM), `brief.md`, and `rules.md`. The agents read from these. One-click "Analyze project" populates them by reading the code.
+
+---
+
+## MCP servers managed per workspace
+
+Different projects need different tool integrations.
+
+With Aiola: `/settings/mcp` installs, enables, and disables MCP servers per workspace. Tool connectivity is standardized without you maintaining a config file by hand for every repo.
+
+---
+
+## Portfolio analytics in one app
+
+You ship multiple products. Comparing growth across them by hand — flipping between dashboards — is slow.
+
+With Aiola: per-project analytics live in `/analytics`, and `/central/analytics` rolls them up. Stats, trends, geography, breakdowns, referrers, funnels, journeys, heatmaps, goals, realtime visitors. Currency conversion and segment filters work across the whole portfolio. Aiola's pricing scales with the analytics event volume you actually use (100k / 500k / 1M / 5M tiers).
+
+---
+
+## Plan, queue, and ship from one app
+
+You plan in Notion, queue work in Linear, and run prompts in a terminal — every round-trip wastes time.
+
+With Aiola: write the plan in `/plan` (nested blocks, rich formatting), break it into tasks on `/tasks`, run agents from the dashboard, and ship via the auto-PR pipeline. No round-trips.
+
+---
+
+## Agency / freelance project isolation
+
+You have several client codebases. Mixing context — or letting an agent touch the wrong project — is a real risk.
+
+With Aiola: each workspace is fully isolated. Threads, tasks, plans, knowledge, and settings stay scoped to their workspace. Central views stay read-only aggregations.
+
+---
+
+## Keeping Claude Code and Codex side-by-side
+
+Some projects work better with Claude. Others work better with Codex. Switching CLIs and config every time is fragile.
+
+With Aiola: install the Claude Code SDK, the Codex SDK, or both. The model picker hides providers that aren't installed. Pick a default and override per thread. Codex's model list is hydrated at runtime so it doesn't go stale.
+
+---
+
+## Env-file safety check across many repos
+
+You're never sure which repos are leaking `.env` files.
+
+With Aiola: `/settings/environment` finds exposed `.env` files, lets you compare and edit them, and adds missing files to `.gitignore` with one click — repeat per workspace.
+
+---
+
+## Calendar and terminals across workspaces
+
+You forget when scheduled work runs and lose track of which terminal session belongs to which project.
+
+With Aiola: `/calendar` and `/central/calendar` show scheduled tasks and recurring automations on one timeline. `/terminals` and `/central/terminals` give you a thread-linked terminal canvas with split and canvas modes — every command stays tied to the right workspace.
 
 ---
 
 ## Links
-- Website: [clawcode.app](https://clawcode.app)
-- Download: [clawcode.app/download](https://clawcode.app/download)
-- Docs: [docs.clawcode.app](https://docs.clawcode.app)
+- Website: [aiola.app](https://aiola.app)
+- Download: [aiola.app/download](https://aiola.app/download)
+- Pricing: [aiola.app/pricing](https://aiola.app/pricing)
+- Docs: [docs.aiola.app](https://docs.aiola.app)
