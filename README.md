@@ -1,6 +1,6 @@
 # Aiola — The Agentic Desktop App for Claude Code & Codex
 
-*Aiola is the local agentic desktop app for Claude Code and Codex — a workspace + portfolio command center for tasks, AI PR review, app-log triage, feedback, scheduled automations, MCP servers, and analytics across all your software projects. Available for macOS (Apple Silicon and Intel) and Windows.*
+*Aiola is the local agentic desktop app for Claude Code and Codex — one multi-provider workspace that replaces juggling Notion, Linear, Sentry, and PostHog. Per-project agentic execution with a portfolio-level command center: tasks, AI code review, error monitoring, feedback, automations, and product analytics across every project on your machine. Multi-provider so you're never locked into one LLM. Local-first so your code never leaves your machine. Available for macOS (Apple Silicon and Intel) and Windows.*
 
 **Aiola is a local agentic desktop app that runs Claude Code and Codex agents across all of your projects from one workspace.**
 It is the agentic command center for tasks, AI PR review, app-log triage, feedback, scheduled automations, MCP servers, and analytics — with an auto-PR pipeline that turns completed tasks into pushed pull requests.
