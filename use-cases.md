@@ -1,14 +1,14 @@
 # Aiola Use Cases
 
-Real-world ways people use Aiola — the local agentic desktop app for Claude Code and Codex.
+Real-world ways people use Aiola — the local agentic desktop app for Claude Code, Codex, and Cursor.
 
-> Aiola requires the **Claude Code SDK** and/or **Codex SDK** to be installed locally. It does not bundle an LLM.
+> Aiola requires the **Claude Code SDK**, the **Codex SDK**, and/or **Cursor (`cursor-agent`)** to be installed locally. It does not bundle an LLM.
 
 ---
 
 ## Running agentic workflows across many repos
 
-You have eight projects — a SaaS, two client apps, three side projects, and two abandoned-but-still-shipping experiments. The Claude Code or Codex CLIs need a separate session per repo, and you constantly lose context.
+You have eight projects — a SaaS, two client apps, three side projects, and two abandoned-but-still-shipping experiments. The Claude Code, Codex, or Cursor CLIs need a separate session per repo, and you constantly lose context.
 
 With Aiola: every repo is a workspace in one local agentic desktop app. The `/central/home` command center aggregates today's tasks, recent app-log spikes, incoming feedback, open PRs, and scheduled automations across every workspace. Pick a global default model, override per thread when a project needs different capability.
 
@@ -78,11 +78,11 @@ With Aiola: per-project analytics live in `/analytics`, and `/central/analytics`
 
 ---
 
-## Plan, queue, and ship from one app
+## Plan, take notes, track todos, queue, and ship from one app
 
-You plan in Notion, queue work in Linear, and run prompts in a terminal — every round-trip wastes time.
+You plan in Notion, jot notes in Apple Notes, keep todos somewhere else, queue work in Linear, and run prompts in a terminal — every round-trip wastes time.
 
-With Aiola: write the plan in `/plan` (nested blocks, rich formatting), break it into tasks on `/tasks`, run agents from the dashboard, and ship via the auto-PR pipeline. No round-trips.
+With Aiola: use `/notebook` to write the plan (nested blocks, rich formatting), keep searchable Notes beside it, and track per-workspace Todos — all three are modes of one surface. #note-mention any note into a chat turn, capture stray thoughts in the Quick Note scratchpad (⌘⇧J), break the plan into tasks on `/tasks`, run agents from the dashboard, and ship via the auto-PR pipeline. No round-trips.
 
 ---
 
@@ -94,11 +94,11 @@ With Aiola: each workspace is fully isolated. Threads, tasks, plans, knowledge, 
 
 ---
 
-## Keeping Claude Code and Codex side-by-side
+## Keeping Claude Code, Codex, and Cursor side-by-side
 
-Some projects work better with Claude. Others work better with Codex. Switching CLIs and config every time is fragile.
+Some projects work better with Claude. Others work better with Codex or Cursor. Switching CLIs and config every time is fragile.
 
-With Aiola: install the Claude Code SDK, the Codex SDK, or both. The model picker hides providers that aren't installed. Pick a default and override per thread. Codex's model list is hydrated at runtime so it doesn't go stale.
+With Aiola: install the Claude Code SDK, the Codex SDK, Cursor (`cursor-agent`), or any combination. The model picker hides providers that aren't installed. Pick a default and override per thread. Codex's model list is hydrated at runtime so it doesn't go stale, and Cursor runs with Git cloning support.
 
 ---
 

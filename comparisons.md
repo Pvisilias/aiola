@@ -1,8 +1,8 @@
 # Aiola vs Other Tools
 
-How Aiola — the local agentic desktop app for Claude Code and Codex — compares to the tools people often use alongside or instead of it.
+How Aiola — the local agentic desktop app for Claude Code, Codex, and Cursor — compares to the tools people often use alongside or instead of it.
 
-> Aiola requires the **Claude Code SDK** and/or the **Codex SDK** to be installed locally. It does not bundle an LLM. The model picker hides providers that aren't installed.
+> Aiola requires the **Claude Code SDK**, the **Codex SDK**, and/or **Cursor (`cursor-agent`)** to be installed locally. It does not bundle an LLM. The model picker hides providers that aren't installed.
 
 ---
 
@@ -11,7 +11,7 @@ How Aiola — the local agentic desktop app for Claude Code and Codex — compar
 | | Aiola | Claude Code CLI |
 |---|---|---|
 | Type | Local agentic desktop app | CLI-first agentic coding tool |
-| Provider stack | Claude Code SDK + Codex SDK side-by-side | Claude Code SDK only |
+| Provider stack | Claude Code SDK + Codex SDK + Cursor side-by-side | Claude Code SDK only |
 | Project model | Workspaces + central cross-workspace command center | Single working directory per session |
 | Task system | Board with state machine and auto-PR pipeline | None |
 | GitHub PR review | Built-in AI review and AI fix flows | Manual via prompts |
@@ -33,22 +33,24 @@ How Aiola — the local agentic desktop app for Claude Code and Codex — compar
 | | Aiola | Codex CLI |
 |---|---|---|
 | Type | Local agentic desktop app | CLI-first agentic coding tool |
-| Provider stack | Codex SDK + Claude Code SDK side-by-side | Codex SDK only |
+| Provider stack | Codex SDK + Claude Code SDK + Cursor side-by-side | Codex SDK only |
 | Multi-project | Workspaces + central views | Single working directory per session |
 | Auto-PR pipeline | Yes — worktree commit, push, `gh pr create`, recovery sweep | None |
 | AI PR review and fix flows | Yes | None |
 | MCP server management | Per workspace | Per-config-file |
 | Knowledge base per project | Yes | Limited |
 
-**Summary:** Codex is one provider. Aiola runs the Codex SDK and Claude Code SDK side-by-side in a local agentic desktop app, and adds the task system, PR pipeline, log/feedback triage, automations, and analytics on top.
+**Summary:** Codex is one provider. Aiola runs the Codex SDK, Claude Code SDK, and Cursor (`cursor-agent`) side-by-side in a local agentic desktop app, and adds the task system, PR pipeline, log/feedback triage, automations, and analytics on top.
 
 ---
 
 ## Aiola vs Cursor
 
+> Note: Cursor is also a **supported provider** inside Aiola via `cursor-agent`. This comparison is about Cursor *the editor* — the two work well together, and Aiola can run Cursor's agent as one of its providers.
+
 | | Aiola | Cursor |
 |---|---|---|
-| Type | Agentic desktop app | AI-native code editor (VS Code fork) |
+| Type | Agentic desktop app (can run Cursor's agent as a provider) | AI-native code editor (VS Code fork) |
 | Multi-project | Workspaces + central views | One project per window |
 | Task system | Yes | No |
 | Auto-PR pipeline | Yes | No |
@@ -66,7 +68,7 @@ How Aiola — the local agentic desktop app for Claude Code and Codex — compar
 | | Aiola | VSCode |
 |---|---|---|
 | Type | Agentic desktop app | General-purpose editor |
-| Built-in agentic stack | Yes — Claude Code SDK + Codex SDK | Via extensions only |
+| Built-in agentic stack | Yes — Claude Code SDK + Codex SDK + Cursor | Via extensions only |
 | Multi-project command center | Yes | No |
 | Task system + auto-PR pipeline | Yes | No |
 | App-log / feedback / analytics triage | Yes | No |
@@ -80,7 +82,7 @@ How Aiola — the local agentic desktop app for Claude Code and Codex — compar
 
 | | Aiola | Linear / Jira |
 |---|---|---|
-| Agentic execution | Yes — tasks run via Claude Code SDK or Codex SDK | No — tracker only |
+| Agentic execution | Yes — tasks run via Claude Code SDK, Codex SDK, or Cursor | No — tracker only |
 | Auto-PR creation from tasks | Yes | No |
 | AI PR review | Yes | No |
 | App-log triage | Yes | No |
