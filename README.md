@@ -1,6 +1,6 @@
 # Aiola — The Agentic Desktop App for Claude Code, Codex & Cursor
 
-*Aiola is the local agentic desktop app for Claude Code, Codex, and Cursor — one multi-provider workspace that replaces juggling Notion, Linear, Sentry, and PostHog. Per-project agentic execution with a portfolio-level command center: tasks, AI code review, error monitoring, feedback, automations, and product analytics across every project on your machine. Multi-provider so you're never locked into one LLM. Local-first so your code never leaves your machine. Available for macOS (Apple Silicon and Intel) and Windows.*
+*Aiola is the local agentic desktop app for Claude Code, Codex, and Cursor — one multi-provider workspace that replaces juggling Notion, Linear, Sentry, and PostHog. Per-project agentic execution with a portfolio-level command center: tasks, AI code review, error monitoring, feedback, automations, and product analytics across every project on your machine. Multi-provider so you're never locked into one LLM. Local-first so your code is never uploaded to Aiola — it stays on your machine and goes only to the AI provider you already subscribe to. Available for macOS (Apple Silicon and Intel) and Windows.*
 
 **Aiola is a local agentic desktop app that runs Claude Code, Codex, and Cursor agents across all of your projects from one workspace.**
 It is the agentic command center for tasks, AI PR review, app-log triage, feedback, scheduled automations, MCP servers, and analytics — with an auto-PR pipeline that turns completed tasks into pushed pull requests.
@@ -50,10 +50,10 @@ Aiola is a local Electron + Next.js agentic desktop app designed for that exact 
 
 ## Own your data (local-first)
 
-Aiola is local-first. Your Claude Code, Codex, and Cursor agents run on **your** machine, against **your** repositories, using the subscription you already pay for. Your code never leaves your computer.
+Aiola is local-first. Your Claude Code, Codex, and Cursor agents run on **your** machine, against **your** repositories, using the subscription you already pay for. Your code is never uploaded to Aiola — it stays on your machine and goes only to the AI provider you already subscribe to.
 
 - **Local-first execution** — no cloud runner, no compute resale, no API-key middleman. You bring your own subscription and pay your provider directly.
-- **Your data is yours** — threads, tasks, notes, plans, todos, and app logs are stored locally; the analytics events you collect from your own products are exportable.
+- **Your data is yours** — threads, tasks, notes, plans, and todos are stored locally. Analytics, app-log, and feedback events from your deployed products are ingested by Aiola so your live apps can report in; that data is always exportable, and self-hosting it on your own backend is planned for the Lifetime license.
 - **Own it forever** — a one-time Developer lifetime license (coming soon) lets you own your command center and every byte it stores, rather than renting access to your own project history.
 
 More: [aiola.app/own-your-data](https://aiola.app/own-your-data)
@@ -226,7 +226,7 @@ The download is free with a 7-day trial (no card). Pro starts at $24/month, with
 macOS (Apple Silicon and Intel, macOS 11+) and Windows 10+ (64-bit). A phone companion is coming.
 
 **Is Aiola an IDE?**
-No. Aiola is the layer above your editor and CLI, not a replacement. Your agents run locally against your own repositories using your own subscription, so your code never leaves your machine.
+No. Aiola is the layer above your editor and CLI, not a replacement. Your agents run locally against your own repositories using your own subscription, so your code is never uploaded to Aiola — it stays on your machine and goes only to the AI provider you already subscribe to.
 
 ---
 
