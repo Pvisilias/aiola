@@ -10,6 +10,8 @@ It is the agentic command center for tasks, AI PR review, app-log triage, feedba
 → **[Download](https://aiola.app/download)**
 → **[Pricing](https://aiola.app/pricing)**
 
+![Aiola — manage Claude Code, Codex & Cursor agents across all your projects](./og-image.png)
+
 ---
 
 ## Installation requirement
@@ -43,6 +45,18 @@ Aiola is a local Electron + Next.js agentic desktop app designed for that exact 
 - Per-project **knowledge base** (`brief.md`, `rules.md`, profile fields) the agents read from
 
 **Aiola is not a code editor.** It is the agentic operations layer between your editor, your terminals, and your GitHub repos.
+
+---
+
+## Own your data (local-first)
+
+Aiola is local-first. Your Claude Code, Codex, and Cursor agents run on **your** machine, against **your** repositories, using the subscription you already pay for. Your code never leaves your computer.
+
+- **Local-first execution** — no cloud runner, no compute resale, no API-key middleman. You bring your own subscription and pay your provider directly.
+- **Your data is yours** — threads, tasks, notes, plans, todos, and app logs are stored locally; the analytics events you collect from your own products are exportable.
+- **Own it forever** — a one-time Developer lifetime license (coming soon) lets you own your command center and every byte it stores, rather than renting access to your own project history.
+
+More: [aiola.app/own-your-data](https://aiola.app/own-your-data)
 
 ---
 
@@ -166,9 +180,9 @@ Pricing is by **analytics event volume**. There is no free plan.
 | 1M events | $89/month | $890/year |
 | 5M events | $249/month | $2,490/year |
 
-**Teams** — coming soon.
+**Developer** — a one-time lifetime license to own all your data locally — coming soon.
 
-Monthly and yearly Pro include the same app capabilities. Only the billing cadence and price change.
+Monthly and yearly Pro include the same app capabilities. Only the billing cadence and price change. You bring your own Claude Code, Codex, or Cursor subscription; Aiola never resells compute and adds no API-key markup.
 
 → [aiola.app/pricing](https://aiola.app/pricing)
 
@@ -183,6 +197,37 @@ Monthly and yearly Pro include the same app capabilities. Only the billing caden
 | Cursor | AI-native single-project editor (and a supported Aiola provider via `cursor-agent`) | Aiola runs Cursor's agent as one of its providers; as a product it is not an editor, it is the agentic operations layer across many repos |
 | VSCode | General-purpose editor | Aiola is a dedicated agentic workspace, not an editor |
 
+### vs other GUI managers
+
+| Tool | Platforms | AI CLIs | Ops layer (automations, analytics, logs, feedback) | Alive? | How Aiola differs |
+|---|---|---|---|---|---|
+| **Aiola** | **macOS + Windows** | **Claude Code, Codex, Cursor** | **Yes** | **Yes** | — |
+| Conductor | macOS only | Claude Code, Codex, Cursor | No | Yes | Aiola adds Windows + the operations layer + central cross-project view |
+| Vibe Kanban | Cross-platform | 10+ CLIs | No | Parent company shut down (2026) | Aiola is a maintained product with a broader ops layer |
+| opcode | Cross-platform | Claude only | No | Yes | Aiola also runs Codex + Cursor and adds the ops layer |
+| Omnara | Mobile / web | Claude Code, Codex | Partial | Yes | Aiola has more desktop depth, adds Cursor + analytics/logs/feedback |
+
+Comparison based on publicly available information, 2026. Deep dives: [aiola.app/alternatives/conductor](https://aiola.app/alternatives/conductor), [/alternatives/vibe-kanban](https://aiola.app/alternatives/vibe-kanban), [/alternatives/opcode](https://aiola.app/alternatives/opcode).
+
+---
+
+## FAQ
+
+**What is Aiola?**
+Aiola is a local desktop app for running Claude Code, Codex, and Cursor agents across all your projects from one place — with threads, tasks, GitHub, app logs, analytics, feedback, automations, and agents. It runs on macOS and Windows.
+
+**Which AI coding tools does it work with?**
+Claude Code, Codex, and Cursor (`cursor-agent`). You bring your own subscription and Aiola orchestrates all three from one app — no API-key markup and no compute resale. Switch providers per project or per task.
+
+**How much does it cost?**
+The download is free with a 7-day trial (no card). Pro starts at $24/month, with yearly billing at 10× the monthly price (2 months free). A one-time Developer lifetime license — own all your data locally — is coming soon.
+
+**What platforms does it run on?**
+macOS (Apple Silicon and Intel, macOS 11+) and Windows 10+ (64-bit). A phone companion is coming.
+
+**Is Aiola an IDE?**
+No. Aiola is the layer above your editor and CLI, not a replacement. Your agents run locally against your own repositories using your own subscription, so your code never leaves your machine.
+
 ---
 
 ## Links
@@ -193,6 +238,7 @@ Monthly and yearly Pro include the same app capabilities. Only the billing caden
 - Pricing: [aiola.app/pricing](https://aiola.app/pricing)
 - Changelog: [aiola.app/changelog](https://aiola.app/changelog)
 - Use cases: [aiola.app/use-cases](https://aiola.app/use-cases)
+- Best apps for managing multiple AI coding projects: [aiola.app/best-apps-for-managing-multiple-ai-coding-projects](https://aiola.app/best-apps-for-managing-multiple-ai-coding-projects)
 - Feature requests: [aiola.featurebase.app](https://aiola.featurebase.app)
 - Support: aiolahq@gmail.com
 
