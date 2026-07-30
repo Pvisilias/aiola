@@ -1,14 +1,14 @@
 # Aiola Use Cases
 
-Real-world ways people use Aiola — the local agentic desktop app for Claude Code, Codex, and Cursor.
+Real-world ways people use Aiola — the local agentic desktop app for Claude Code, Codex, Cursor, Grok CLI, and OpenCode.
 
-> Aiola requires the **Claude Code SDK**, the **Codex SDK**, and/or **Cursor (`cursor-agent`)** to be installed locally. It does not bundle an LLM.
+> Aiola requires at least one supported provider to be installed locally: **Claude Code SDK / CLI**, **Codex SDK / CLI**, **Cursor (`cursor-agent`)**, **Grok CLI (`grok`)**, or **OpenCode (`opencode`)**. It does not bundle an LLM.
 
 ---
 
 ## Running agentic workflows across many repos
 
-You have eight projects — a SaaS, two client apps, three side projects, and two abandoned-but-still-shipping experiments. The Claude Code, Codex, or Cursor CLIs need a separate session per repo, and you constantly lose context.
+You have eight projects — a SaaS, two client apps, three side projects, and two abandoned-but-still-shipping experiments. The Claude Code, Codex, Cursor, Grok CLI, or OpenCode CLIs need a separate session per repo, and you constantly lose context.
 
 With Aiola: every repo is a workspace in one local agentic desktop app. The `/central/home` command center aggregates today's tasks, recent app-log spikes, incoming feedback, open PRs, and scheduled automations across every workspace. Pick a global default model, override per thread when a project needs different capability.
 
@@ -72,9 +72,33 @@ With Aiola: `/settings/mcp` installs, enables, and disables MCP servers per work
 
 ## Portfolio analytics in one app
 
-You ship multiple products. Comparing growth across them by hand — flipping between dashboards — is slow.
+You ship multiple products. Comparing growth across them is slow, and ordinary traffic totals do not tell you whether AI systems are citing, indexing, or training on your content.
 
-With Aiola: per-project analytics live in `/analytics`, and `/central/analytics` rolls them up. Stats, trends, geography, breakdowns, referrers, funnels, journeys, heatmaps, goals, realtime visitors. Currency conversion and segment filters work across the whole portfolio. Aiola's pricing scales with the analytics event volume you actually use (100k / 500k / 1M / 5M tiers).
+With Aiola: the analytics dashboard splits into Traffic and AI tabs. Per-project analytics live in `/analytics`, and `/central/analytics` rolls them up with stats, trends, geography, breakdowns, referrers, funnels, journeys, heatmaps, goals, realtime visitors, currency conversion, and segment filters. The AI layer recognizes 70 AI and search crawlers by vendor and splits bot traffic by purpose: AI answers, indexing, training, and other fetchers. It tracks human AI Referrals separately, computes a deterministic 0–100 AI Visibility Score from crawl coverage, crawler breadth, referral volume, assistant breadth, and discovery-file health, and surfaces broken pages, robots.txt / llms.txt / sitemap health, page coverage, and popular pages no AI crawler has touched.
+
+---
+
+## Knowing whether AI recommends your product
+
+You cannot tell from search rankings or crawler traffic whether assistants recommend your product to buyers.
+
+With Aiola: the deterministic 0–100 AI Visibility Score measures crawl coverage of popular pages, AI-crawler breadth, AI-answer referral volume, assistant breadth, and discovery-file health. The prebuilt AI visibility check automation runs buyer-style questions on whichever supported CLI the automation uses, through your existing provider subscription with no extra API cost, and anchors the result on the computed score. Agents can retrieve the same score through the `get_analytics_overview` MCP tool.
+
+---
+
+## Finding pages AI crawlers ask for that do not exist yet
+
+AI and search crawlers repeatedly request URLs that return 404, but ordinary crawl totals hide the content demand behind those failures.
+
+With Aiola: broken-page tracking lists those requested URLs separately so they never inflate crawl totals. Repeated requests become a content-roadmap signal: the AI already thinks the page exists, so you can decide whether to build it.
+
+---
+
+## Telling AI citations apart from AI training
+
+A crawler hit can mean an assistant is citing your content in a live answer, a search engine is indexing it, or a model builder is collecting training data. Those events do not have the same commercial meaning.
+
+With Aiola: bot traffic is classified by purpose. AI answers covers ChatGPT-User, Claude-User, and Perplexity-User fetching a page live for someone's question; Indexing covers search crawlers; Training covers model-training crawlers; Other covers ad and link-preview fetchers. AI Referrals separately count human visitors who clicked through from an AI answer, so live citation, future discoverability, training access, and attributable visits are not lumped together.
 
 ---
 
@@ -94,11 +118,11 @@ With Aiola: each workspace is fully isolated. Threads, tasks, plans, knowledge, 
 
 ---
 
-## Keeping Claude Code, Codex, and Cursor side-by-side
+## Keeping five agent CLIs side-by-side
 
-Some projects work better with Claude. Others work better with Codex or Cursor. Switching CLIs and config every time is fragile.
+Some projects work better with Claude Code, Codex, Cursor, Grok CLI, or OpenCode. Switching CLIs and config every time is fragile.
 
-With Aiola: install the Claude Code SDK, the Codex SDK, Cursor (`cursor-agent`), or any combination. The model picker hides providers that aren't installed. Pick a default and override per thread. Codex's model list is hydrated at runtime so it doesn't go stale, and Cursor runs with Git cloning support.
+With Aiola: install the Claude Code SDK / CLI, Codex SDK / CLI, Cursor (`cursor-agent`), Grok CLI (`grok`), OpenCode (`opencode`), or any combination. The model picker hides providers that aren't installed. Pick a default and override per thread. Claude Opus 5 is available with 1M-token context by default, selectable 200K context, Fast mode, and reasoning up to Extra High. Codex's model list is hydrated at runtime from the SDK so it does not go stale. Cursor runs with Git cloning support. Grok models, currently including grok-4.5, and OpenCode's configured provider/model pairs are discovered live from the installed CLI.
 
 ---
 
