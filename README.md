@@ -1,6 +1,6 @@
 # Aiola: everything your coding agents need, in one app
 
-![Aiola: coding agents, errors, feedback and analytics](./og-image.png)
+![Aiola: everything your coding agents need in one app. Production errors, user feedback, analytics, GitHub and tasks beside Claude Code, Codex, Cursor, Grok CLI, OpenCode and Antigravity on Mac, Windows, iPhone, iPad and Android](./og-image.png)
 
 One app to build, run and support your products; gives coding agents production errors, user feedback, analytics, GitHub issues and tasks; runs Claude Code, Codex, Cursor, Grok CLI, OpenCode and Antigravity on your own subscriptions; Mac, Windows, iPhone, iPad and Android.
 

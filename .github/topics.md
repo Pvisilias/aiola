@@ -1,41 +1,28 @@
 # GitHub repository topics
 
-Suggested topics for people looking for coding agents and product tools.
-Choose the topics that best describe the repository when updating GitHub settings.
+The 20 topics set on the repository (GitHub's limit), chosen from Google, Bing and ChatGPT search data on 13 November 2026.
 
 ```text
 aiola
 coding-agents
-agent-orchestrator
 ai-agents
 claude-code
 claude-code-gui
+claude-code-desktop
 codex
 codex-gui
 cursor
-antigravity
-grok-cli
 opencode
-ai-coding
-multi-project
-multi-repo
-ai-pr-review
-mcp
+grok-cli
+antigravity
+multi-agent
+agent-orchestrator
+conductor-alternative
 mcp-server
+ai-crawler-analytics
 error-tracking
 user-feedback
 web-analytics
-ai-crawlers
-mobile-app
-desktop-app
-macos
-windows
-ios
-android
-task-management
-workflow-automation
-developer-tools
-indie-hacker
 ```
 
 These topics describe how people use Aiola:

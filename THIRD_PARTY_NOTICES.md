@@ -1531,10 +1531,6 @@ Aiola also uses many smaller open-source packages under permissive licenses (mos
 
 ## Mobile terminal module notices
 
-From `apps/mobile/modules/aiola-terminal/THIRD_PARTY_NOTICES.md`:
-
-
-
 ### T3 Code mobile terminal module
 
 The Swift, Kotlin, and JNI sources in this module are derived from the `t3-terminal` Expo module in
