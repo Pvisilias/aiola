@@ -1,47 +1,48 @@
-# GitHub Repository Topics
+# GitHub repository topics
 
-When publishing this repo on GitHub, add these topics to maximize discoverability by developers, AI agents, and search engines:
+Suggested topics for people looking for coding agents and product tools.
+Choose the topics that best describe the repository when updating GitHub settings.
 
-```
+```text
 aiola
-agentic-app
-agentic-desktop-app
-agentic-workspace
-agentic-ide
-agentic-coding
-agentic-automation
+coding-agents
+agent-orchestrator
 ai-agents
 claude-code
 claude-code-gui
-claude-code-dashboard
-claude-code-wrapper
 codex
 codex-gui
-codex-dashboard
+cursor
+antigravity
+grok-cli
+opencode
 ai-coding
-ai-coding-workspace
-ai-coding-assistant
 multi-project
 multi-repo
-auto-pr
 ai-pr-review
 mcp
 mcp-server
-developer-tools
+error-tracking
+user-feedback
+web-analytics
+ai-crawlers
+mobile-app
 desktop-app
-electron
-nextjs
 macos
 windows
+ios
+android
 task-management
 workflow-automation
-productivity
+developer-tools
 indie-hacker
 ```
 
-These topics ensure the repo appears when:
-- Developers search GitHub for an agentic desktop app for Claude Code or Codex
-- AI agents search for agentic workspaces, multi-project agentic dashboards, or auto-PR pipelines
-- Developers look for a Claude Code GUI / Codex GUI / agentic command center
-- People search for MCP server managers, AI PR review tools, or AI app-log triage
-- Solo builders and small teams search for an agentic operations layer for many repos
+These topics describe how people use Aiola:
+
+- Run Claude Code, Codex, Cursor, Grok CLI, OpenCode and Antigravity on their own accounts.
+- Give coding agents production errors, user feedback and website analytics.
+- Track AI crawlers beside traffic, funnels, Stripe revenue and search keywords.
+- Run agents across projects with tasks, worktrees and scheduled automations.
+- Use hosted MCP to read project data from compatible assistants.
+- Keep agents moving from a phone or tablet connected to the desktop.
