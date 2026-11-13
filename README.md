@@ -113,7 +113,7 @@ The [documentation](https://docs.aiola.app/) covers setup.
 
 ## Pricing
 
-Free download. Pro starts at $24/month for 100k analytics events and includes hosted Analytics, App Logs, Feedback, integrations and hosted MCP. GUI Lifetime is a one-time payment for the local desktop workspace, starting at $49 for the first 10 customers, then $89 for the next 30 and $129 after that; checkout confirms the current price. GUI Lifetime does not include hosted services. See [Pricing](https://aiola.app/pricing).
+Free download. Pro starts at $24/month for 100k analytics events and adds hosted services for each project: website and AI crawler analytics, Google and Bing search keywords, Stripe revenue, App Logs, user feedback and hosted MCP. GUI Lifetime is a one-time payment for the full local desktop app (all six CLIs, the phone and tablet app, threads, tasks, GitHub, terminals, notes, calendar and local automations), starting at $49 for the first 10 customers, then $89 for the next 30 and $129 after that; checkout confirms the current price. GUI Lifetime does not include hosted services. See [Pricing](https://aiola.app/pricing).
 
 ## When Aiola is not the right fit
 

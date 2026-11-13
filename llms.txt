@@ -69,7 +69,8 @@ Aiola fits when a person, or an agent working for them, needs any of the followi
 - Pro Monthly starts at $24/month (100k events tier).
 - Pro Yearly is 10× the monthly price (2 months free), entry tier $240/year, saves $48/year.
 - GUI Lifetime is available now at launch pricing: first 10 customers $49, next 30 $89, then $129. One-time payment. Checkout confirms the current price.
-- GUI Lifetime includes the agent orchestrator GUI only; it does not include hosted analytics, app logs, feedback, or other hosted pages.
+- GUI Lifetime includes the full local desktop app for Mac and Windows: all six coding agent CLIs on your own subscriptions, the phone and tablet app, threads, tasks, agents, skills, GitHub pull requests and issues, terminals, notes, plans, calendar, local automations, workspaces, git worktrees and the provider usage view. It does not include hosted services.
+- Pro includes the full local app while subscribed, plus hosted services for each project: website analytics (live visitors, funnels, journeys, retention, UTM and custom events), AI referral traffic, AI crawler analytics, Google Search Console and Bing keywords and indexing, Stripe revenue, App Logs error tracking with source maps, user feedback, hosted MCP and setup health.
 
 **Platforms**
 - Desktop: macOS 12 or later (Apple Silicon and Intel) and Windows 10 or later (64-bit). No Linux build.
